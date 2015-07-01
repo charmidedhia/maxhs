@@ -29,7 +29,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <vector>
 
 using std::vector;
-
+using std::string;
 #include "minisat/core/SolverTypes.h"
 #include "maxhs/core/MaxSolverTypes.h"
 #include "maxhs/ifaces/SatSolver.h"
@@ -144,7 +144,7 @@ protected:
   void storeCplexCls(const vector<Lit>& cls);
   void readCores(std::string filename, vector<vector <Lit> >& clslist);
   void storeCplexClsToFile( vector<Lit>& cls);
-
+void readSigma(string filename, vector<Lit> &sigma);
   //output routines
   void printErrorAndExit(const char *msg);
   void printSolution(const vector<lbool>& model);

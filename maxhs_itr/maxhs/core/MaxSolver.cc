@@ -137,7 +137,7 @@ void MaxSolver::solve_maxsat() {
   seqOfSAT_maxsat();
 }
 
-void MaxSolver::solvewithcores(string corefilename, vector<Lit> sigma) {
+void MaxSolver::solvewithcores(string corefilename) {
   //1. Compute an initial lower and upper bound by solving
   //   $F_b^{eq}$ (the reified theory). 
   addHards(satsolver);
@@ -1355,7 +1355,7 @@ void MaxSolver::readSigma(string filename, vector<Lit> &sigma){
       int val;
       iss>>val;
       if (val>0){val *=2;}
-      esle {val*=-2;val++;}
+      else {val*=-2;val++;}
       sigma.push_back(toLit(val));
     }
   }
