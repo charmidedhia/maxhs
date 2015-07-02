@@ -162,8 +162,11 @@ void MaxSolver::solvewithcores(string corefilename) {
   //update Bounds
   updateLB(getForcedWt()); //get forced weight
   updateUB();
-
+   // cout<<"UB "<<UB()<<endl;
   satsolver->solve(sigma);
+  updateUB();
+  // cout<<"solved sigma UB "<<UB()<<endl;
+  updateUB();
 
   if(LB() >= UB()) {
     optFound("c Solved by Init Bnds.");
@@ -1346,16 +1349,20 @@ void MaxSolver::readCores(string filename, vector<vector <Lit> >& clslist){
 }
 
 void MaxSolver::readSigma(string filename, vector<Lit> &sigma){
+	// cout<<"read sigma\n";
   std::ifstream in;
   in.open(filename);
   std::string s;
   while(getline(in,s)){
     std::istringstream iss(s);
+    string t;
+    if(iss>>t){}
+    	else cout<<"ERROR\n";
     while(iss){
       int val;
       iss>>val;
-      if (val>0){val *=2;}
-      else {val*=-2;val++;}
+      if (val>0){val *=2;val=val-2;}
+      else {val*=-2;val++;val=val-2;}
       sigma.push_back(toLit(val));
     }
   }

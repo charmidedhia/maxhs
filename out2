@@ -1,0 +1,64 @@
+c MaxHS 2.51
+c Instance: test_maxsat.cnf
+c Dimacs Vars: 29
+c Dimacs Clauses: 74
+c HARD: #Clauses = 70, Total Lits = 174, Ave Len = 2.48571
+c SOFT: #Clauses = 4, Total Lits = 6, Ave Len = 1.5
+c Total Soft Clause Weight: 4, Dimacs Top = 5
+c SOFT%: 5.40541%
+c #distinct weights: 1, mean = 1, std. dev = 0, min = 1, max = 1
+c Total Clauses: 74
+c Parse time: 0
+c Wcnf Space Required: 0.000752MB
+c ================================
+c MUSER added 70 hard clauses
+read sigma
+3
+5
+7
+9
+10
+12
+14
+16
+19
+21
+22
+25
+26
+28
+30
+33
+34
+37
+39
+41
+42
+45
+46
+48
+51
+53
+55
+56
+58
+116
+c Hard Clauses are UNSAT.
+s UNSATISFIABLE
+c Final LB: 5
+c Final UB: 4
+c CPLEX: #constraints 0
+c CPLEX: Avg constraint size -nan
+c CPLEX: #non-core constraints 0
+c CPLEX: Ave non-core size -nan
+c SAT: #calls 1
+c SAT: Total time 0
+c SAT: #muser calls 0 (-nan % successful)
+c SAT: Minimize time 0 (-nan%)
+c SAT: Avg constraint minimization -nan
+c CPLEX: #calls 0
+c CPLEX: Total time 0
+c GREEDY: #calls 0
+c GREEDY: Total time 0
+c MEM MB: 32
+c CPU: 0
